@@ -1,4 +1,9 @@
 <h1>Books</h1>
+<% @books.each do |book| %>
+  <p>Title</p>
+  <span><%= book.title %></span>
+<% end %>
+
 <h1>New book</h1>
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
   <h4>Title</h4>
