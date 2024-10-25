@@ -1,3 +1,13 @@
+<h3>User info</h3>
+<% if @user.image.attached? %>
+  <%= image_tag @user.image, size: "200x200" %>
+<% else %>
+  <%= image_tag 'no_image', size: "200x200" %>
+<% end %>
+
+<p>name: <%= @user.name %></p>
+<p>introduction: <%= @user.introduction %></p>
+
 <h3>New book</h3>
 <%= form_with model: @book do |f| %>
   <p>Title</p>
