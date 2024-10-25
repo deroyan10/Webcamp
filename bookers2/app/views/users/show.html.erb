@@ -7,6 +7,7 @@
 
 <p>name: <%= @user.name %></p>
 <p>introduction: <%= @user.introduction %></p>
+<%= link_to "Edit", edit_user_path %>
 
 <h3>New book</h3>
 <%= form_with model: @book do |f| %>
