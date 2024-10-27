@@ -6,14 +6,22 @@
     </div>
     <div class="col-md-8 offset-md-1">
       <h3>Book detail</h3>
-      <%= image_tag 'no_image', alt: 'Example Image', class: 'img-thumbnail' %>
-      <%= link_to @user.name, user_path %>
-      <%= link_to @book.title, book_path(@book.id) %>
-      <%= @book.opinion %>
-      <% if @book.user == current_user %>
-        <%= link_to "Edit", edit_book_path(@book.id) %>
-        <%= link_to "Destroy", book_path, method: :delete, "data-confirm" => "本当に消しますか？" %>
-      <% end %>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>
+              <%= image_tag 'no_image', alt: 'Example Image', class: 'img-thumbnail' %><br>
+              <%= link_to @user.name, user_path %>
+            </td>
+            <td><%= link_to @book.title, book_path(@book.id) %></td>
+            <td><%= @book.opinion %></td>
+            <% if @book.user == current_user %>
+              <td><%= link_to "Edit", edit_book_path(@book.id) %></td>
+              <td><%= link_to "Destroy", book_path, method: :delete, "data-confirm" => "本当に消しますか？" %></td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
