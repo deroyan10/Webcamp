@@ -1,24 +1,5 @@
-<h3>User info</h3>
-<% if @user.image.attached? %>
-  <%= image_tag @user.image, size: "200x200" %>
-<% else %>
-  <%= image_tag 'no_image', size: "200x200" %>
-<% end %>
-
-<p>name: <%= @user.name %></p>
-<p>introduction: <%= @user.introduction %></p>
-<%= link_to "Edit", edit_user_path %>
-
-<h3>New book</h3>
-<%= form_with model: @book do |f| %>
-  <p>Title</p>
-  <%= f.text_field :title %>
-
-  <p>Opinion</p>
-  <%= f.text_area :opinion %>
-
-  <%= f.submit '投稿' %>
-<% end %>
+<%= render 'userinfo', user: @user %>
+<%= render 'books/newbook', newbook: @newbook %>
 
 <h3>Books</h3>
 <table class="table table-striped">

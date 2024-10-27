@@ -1,0 +1,10 @@
+<h3>User info</h3>
+<% if user.image.attached? %>
+  <%= image_tag user.image, size: "200x200" %>
+<% else %>
+  <%= image_tag 'no_image', size: "200x200" %>
+<% end %>
+
+<p>name: <%= user.name %></p>
+<p>introduction: <%= user.introduction %></p>
+<%= link_to "Edit", edit_user_path %>
