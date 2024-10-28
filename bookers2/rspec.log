@@ -248,7 +248,7 @@ Userモデルのテスト
 [32m        自分の名前と紹介文は表示されない[0m
 [32m        自分のユーザ編集画面へのリンクは存在しない[0m
     他人の投稿編集画面
-[31m      遷移できず、投稿一覧画面にリダイレクトされる (FAILED - 1)[0m
+[32m      遷移できず、投稿一覧画面にリダイレクトされる[0m
     他人のユーザ詳細画面のテスト
       表示の確認
 [32m        URLが正しい[0m
@@ -289,57 +289,6 @@ Userモデルのテスト
 [32m      投稿一覧画面でレンチアイコンが表示される[0m
 [32m      投稿詳細画面でレンチアイコンが表示される[0m
 
-Failures:
-
-  1) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる
-     [31mFailure/Error: redirect_to books_pathr[0m
-     [31m[0m
-     [31mNameError:[0m
-     [31m  undefined local variable or method `books_pathr' for #<BooksController:0x0000000001cc78>[0m
-     [31m[0m
-     [31m        redirect_to books_pathr[0m
-     [31m                    ^^^^^^^^^^^[0m
-     [31m  Did you mean?  books_path[0m
-     [31m                 book_path[0m
-     [36m# ./app/controllers/books_controller.rb:28:in `edit'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7.9/lib/action_text/rendering.rb:20:in `with_renderer'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7.9/lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/tempfile_reaper.rb:15:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/etag.rb:27:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/conditional_get.rb:27:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/head.rb:12:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/session/abstract/id.rb:266:in `context'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/session/abstract/id.rb:260:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7.9/lib/rails/rack/logger.rb:37:in `call_app'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7.9/lib/rails/rack/logger.rb:26:in `block in call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7.9/lib/rails/rack/logger.rb:26:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/method_override.rb:24:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/runtime.rb:22:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/sendfile.rb:110:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7.9/lib/rails/engine.rb:539:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/urlmap.rb:74:in `block in call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/urlmap.rb:58:in `each'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/urlmap.rb:58:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.10/lib/rack/builder.rb:244:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-test-2.1.0/lib/rack/test.rb:360:in `process_request'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-test-2.1.0/lib/rack/test.rb:163:in `custom_request'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-test-2.1.0/lib/rack/test.rb:112:in `get'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.40.0/lib/capybara/rack_test/browser.rb:81:in `process'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.40.0/lib/capybara/rack_test/browser.rb:56:in `process_and_follow_redirects'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.40.0/lib/capybara/rack_test/browser.rb:26:in `visit'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.40.0/lib/capybara/rack_test/driver.rb:46:in `visit'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.40.0/lib/capybara/session.rb:281:in `visit'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.40.0/lib/capybara/dsl.rb:52:in `call'[0m
-     [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.40.0/lib/capybara/dsl.rb:52:in `visit'[0m
-     [36m# ./spec/system/03_finishing_touches_spec.rb:268:in `block (4 levels) in <main>'[0m
-
-Finished in 33.73 seconds (files took 1.23 seconds to load)
-[31m201 examples, 1 failure[0m
-
-Failed examples:
-
-[31mrspec ./spec/system/03_finishing_touches_spec.rb:265[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる[0m
+Finished in 33.27 seconds (files took 1.22 seconds to load)
+[32m201 examples, 0 failures[0m
 
