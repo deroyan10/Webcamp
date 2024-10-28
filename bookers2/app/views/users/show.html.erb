@@ -19,7 +19,7 @@
           <tbody>
             <tr>
               <% if book.user_id == @user.id %>
-                <td><%= link_to image_tag('no_image', alt: 'Example Image', class: 'img-thumbnail'), user_path(@user.id) %></td>
+                <td><%= link_to image_tag('no_image'), user_path(@user.id) %></td>
                 <td><%= link_to book.title, book_path(book.id) %></td>
                 <td><%= book.body %></td>
               <% end %>
