@@ -1,9 +1,5 @@
 <h3>User info</h3>
-<% if user.profile_image.attached? %>
-  <%= image_tag user.profile_image, size: "200x200" %>
-<% else %>
-  <%= image_tag 'no_image', size: "200x200" %>
-<% end %>
+<%= image_tag user.get_image, size: "100x100" %>
 <table class="table">
   <tbody>
     <tr>
