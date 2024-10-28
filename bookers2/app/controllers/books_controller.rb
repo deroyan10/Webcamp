@@ -7,7 +7,7 @@ class BooksController < ApplicationController
     book = Book.new(book_params)
     book.user_id = current_user.id
     book.save
-    redirect_to user_path(current_user.id)
+    redirect_to book_path(book.id)
   end
 
   def index
@@ -37,7 +37,7 @@ class BooksController < ApplicationController
   def show
     @newbook = Book.new
     @book = Book.find(params[:id])
-    @user = User.find(current_user.id)
+    @user = User.find(@book.user_id)
   end
 
   private
